@@ -6,7 +6,7 @@ const {users: ctrl} = require('../../controllers')
 const router = express.Router()
 
 router.post('/signup', validation(joiSchema), ctrlWrapper(ctrl.signup))
-router.post('/login',ctrlWrapper(ctrl.login))
+router.post('/login', validation(joiSchema), ctrlWrapper(ctrl.login))
 router.get('/logout',ctrlWrapper(ctrl.logout))
 router.get('/current', ctrlWrapper(ctrl.current))
 
