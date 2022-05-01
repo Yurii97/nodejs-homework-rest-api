@@ -1,4 +1,4 @@
-const {Contact}=require('../../models')
+const { Contact } = require("../../models");
 
 const addContact = async (req, res) => {
   const { _id } = req.user;
@@ -7,9 +7,9 @@ const addContact = async (req, res) => {
     status: "success",
     code: 201,
     data: {
-      result
-    }
-  })
+      result,
+    },
+  });
 };
 
 module.exports = addContact;
